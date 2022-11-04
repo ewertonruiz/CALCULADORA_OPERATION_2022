@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - EWERTON RUIZ DE ALMADA</title>
+</head>
+<body>
+   <h1>Minha Calculadora - EWERTON_OPERATION - 2022</h1> 
+
+   <h2>Primeiro Número</h2>
+   <input id ="n1" type="number" /><br />
+
+   <h2>Segundo Número</h2>
+   <input id="n2" type="number" /><br /><br />
+
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+       <br /><br />
+    O resultado é <span></span>
+   
+   <script>
+    let n1 = document.querySelector('#n1')
+    let n2 = document.querySelector('#n2')
+    let resultado = document.querySelector('span')
+
+//FUNÇÕES DAS QUATRO OPERAÇÕES MATEMÁTICAS
+//FUNÇÃO SOMAR
+   function somar(){
+        resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)       
+   }
+//FUNÇÃO SUBTRAIR
+    function subtrair() {
+        resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+    }
+//FUNÇÃO MULTIPLICAR
+    function multiplicar() {
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+    }
+//FUNÇÃO DIVIDIR
+    function dividir() {
+        resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+    }   
+   </script>
+
+</body>
+</html>
