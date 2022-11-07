@@ -21,29 +21,44 @@
     <button onclick="dividir()">Dividir</button>
 
        <br /><br />
-    O resultado é <span></span>
+    <!-- O resultado é <span></span> -->
    
    <script>
     let n1 = document.querySelector('#n1')
     let n2 = document.querySelector('#n2')
-    let resultado = document.querySelector('span')
+    // let resultado = document.querySelector('span')
 
 //FUNÇÕES DAS QUATRO OPERAÇÕES MATEMÁTICAS
 //FUNÇÃO SOMAR
    function somar(){
-        resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)       
+    const p = document.createElement('p') 
+    p.innerHTML = 'O resultado da soma foi ' + (parseFloat(n1.value) + parseFloat(n2.value)) + '\n'
+    document.body.appendChild(p)
+             
    }
 //FUNÇÃO SUBTRAIR
     function subtrair() {
-        resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        const p = document.createElement('p')
+        p.innerHTML = 'O resultado da subtração foi ' + (parseFloat(n1.value) - parseFloat(n2.value)) + '\n'
+        document.body.appendChild(p)
+        
     }
 //FUNÇÃO MULTIPLICAR
     function multiplicar() {
-            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+        const p = document.createElement('p')
+        p.innerHTML = 'O resultado da multiplicação foi ' + (parseFloat(n1.value) * parseFloat(n2.value)) + '\n'
+        document.body.appendChild(p)
     }
 //FUNÇÃO DIVIDIR
     function dividir() {
-        resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+        const p = document.createElement('p')
+        let resultado = (parseFloat(n1.value) / parseFloat(n2.value))
+        if (resultado == Infinity){
+            p.innerHTML = 'O resultado da divisão é 0 \n' 
+        }else{
+            p.innerHTML = 'O resultado da divisão foi ' + resultado + '\n'
+        }
+        document.body.appendChild(p)
     }   
    </script>
 
